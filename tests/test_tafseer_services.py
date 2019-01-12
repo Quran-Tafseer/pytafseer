@@ -31,3 +31,12 @@ def test_get_tafseer_text_range_verse():
     book = QuranTafseer(1)
     tafseer_text = book.get_tafseer_text(1, 1, 2)
     assert len(tafseer_text) == 2
+
+
+@pytest.mark.vcr()
+def test_get_tafseer_text_one_verse_with_its_text():
+    book = QuranTafseer(1)
+    tafseer_text = book.get_tafseer_text(1, 1, with_verse_text=True)
+    assert list(tafseer_text.keys()) == ['tafseer_id', 'tafseer_name',
+                                         'ayah_url', 'ayah_number',
+                                         'text', 'ayah_text']

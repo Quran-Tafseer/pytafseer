@@ -33,7 +33,8 @@ class QuranTafseer:
         self.book_id = book_id
 
     def get_tafseer_text(self, chapter_number: int, verse_number: int,
-                         verse_number_to: int = None) -> dict:
+                         verse_number_to: int = None,
+                         with_verse_text: bool = False) -> dict:
         """get_tafseer_text Gets the tafseer text for one verse or range of verses
 
         :param chapter_number: Chapter number
@@ -47,4 +48,21 @@ class QuranTafseer:
             request_url += f'/{verse_number_to}'
         response = requests.get(request_url)
         response.raise_for_status
-        return response.json()
+        tafseer_dict = response.json()
+        if with_verse_text:
+            verse_text_url = urljoin(WEB_API_URL, tafseer_dict['ayah_url'])
+            tafseer_dict['ayah_text'] = self._get_verse_text(verse_text_url)
+        return tafseer_dict
+
+    def _get_verse_text(self, url: str) -> str:
+        """_get_verse_text Gets verse text.
+
+        :param url: URL to make a request to get the verse text
+        :return: The verse text
+        :rtype: str
+        """
+
+        verse_text_url = urljoin(WEB_API_URL, url)
+        verse_text_res = requests.get(verse_text_url)
+        verse_text_res.raise_for_status
+        return verse_text_res.json()['text']
