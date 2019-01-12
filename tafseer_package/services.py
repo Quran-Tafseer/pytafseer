@@ -28,3 +28,23 @@ class QuranTafseer:
         response = requests.get(request_url, params=params)
         response.raise_for_status()
         return response.json()
+
+    def __init__(self, book_id: int):
+        self.book_id = book_id
+
+    def get_tafseer_text(self, chapter_number: int, verse_number: int,
+                         verse_number_to: int = None) -> dict:
+        """get_tafseer_text Gets the tafseer text for one verse or range of verses
+
+        :param chapter_number: Chapter number
+        :param verse_number: Verse number or a start range.
+        :param verse_number_to: Verse number end range, defaults to None,
+        optional
+        """
+        request_url = (f'{WEB_API_URL}/tafseer/{self.book_id}/'
+                       f'{chapter_number}/{verse_number}')
+        if verse_number_to is not None:
+            request_url += f'/{verse_number_to}'
+        response = requests.get(request_url)
+        response.raise_for_status
+        return response.json()
