@@ -33,25 +33,42 @@ class QuranTafseer:
         self.book_id = book_id
 
     def get_tafseer_text(self, chapter_number: int, verse_number: int,
-                         verse_number_to: int = None,
                          with_verse_text: bool = False) -> dict:
         """get_tafseer_text Gets the tafseer text for one verse or range of verses
 
         :param chapter_number: Chapter number
         :param verse_number: Verse number or a start range.
-        :param verse_number_to: Verse number end range, defaults to None,
-        optional
         """
         request_url = (f'{WEB_API_URL}/tafseer/{self.book_id}/'
                        f'{chapter_number}/{verse_number}')
-        if verse_number_to is not None:
-            request_url += f'/{verse_number_to}'
         response = requests.get(request_url)
         response.raise_for_status
         tafseer_dict = response.json()
         if with_verse_text:
             verse_text_url = urljoin(WEB_API_URL, tafseer_dict['ayah_url'])
-            tafseer_dict['ayah_text'] = self._get_verse_text(verse_text_url)
+            tafseer_dict['verse_text'] = self._get_verse_text(verse_text_url)
+        return tafseer_dict
+
+    def get_tafseer_text_range(self, chapter_number: int,
+                               verse_number_from: int,
+                               verse_number_to: int,
+                               with_verse_text: bool = False) -> dict:
+        """get_tafseer_text Gets the tafseer text for one verse or range of verses
+
+        :param chapter_number: Chapter number
+        :param verse_number_from: Verse number start range.
+        :param verse_number_to: Verse number end range.
+        """
+        request_url = (f'{WEB_API_URL}/tafseer/{self.book_id}/'
+                       f'{chapter_number}/{verse_number_from}/'
+                       f'{verse_number_to}')
+        response = requests.get(request_url)
+        response.raise_for_status
+        tafseer_dict = response.json()
+        if with_verse_text:
+            for verse in tafseer_dict:
+                verse_text_url = urljoin(WEB_API_URL, verse['ayah_url'])
+                verse['verse_text'] = self._get_verse_text(verse_text_url)
         return tafseer_dict
 
     def _get_verse_text(self, url: str) -> str:
