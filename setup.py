@@ -38,11 +38,11 @@ setup(
     include_package_data=True,
     keywords='tafseer, quran, translation, tafsir',
     name='pytafseer',
-    packages=find_packages(include=['tafseer_package']),
+    packages=find_packages(include=['pytafseer']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/emadmokhtar/tafseer_package',
+    url='https://github.com/emadmokhtar/pytafseer',
     version='0.1.0',
     zip_safe=False,
 )

@@ -15,7 +15,7 @@ pytafseer.settings module
 pytafseer.tafseer\_package module
 ---------------------------------
 
-.. automodule:: pytafseer.tafseer_package
+.. automodule:: pytafseer.pytafseer
     :members:
     :undoc-members:
     :show-inheritance:
