@@ -29,8 +29,10 @@ class QuranTafseer:
         response.raise_for_status()
         return response.json()
 
-    def __init__(self, book_id: int):
+    def __init__(self, book_id: int) -> None:
         self.book_id = book_id
+        self.base_url = '{}/tafseer/{}'.format(WEB_API_URL,
+                                               book_id)
 
     def get_tafseer_text(self, chapter_number: int, verse_number: int,
                          with_verse_text: bool = False) -> dict:
@@ -39,8 +41,9 @@ class QuranTafseer:
         :param chapter_number: Chapter number
         :param verse_number: Verse number or a start range.
         """
-        request_url = (f'{WEB_API_URL}/tafseer/{self.book_id}/'
-                       f'{chapter_number}/{verse_number}')
+        request_url = '{}/{}/{}'.format(self.base_url,
+                                        chapter_number,
+                                        verse_number)
         response = requests.get(request_url)
         response.raise_for_status
         tafseer_dict = response.json()
@@ -59,9 +62,11 @@ class QuranTafseer:
         :param verse_number_from: Verse number start range.
         :param verse_number_to: Verse number end range.
         """
-        request_url = (f'{WEB_API_URL}/tafseer/{self.book_id}/'
-                       f'{chapter_number}/{verse_number_from}/'
-                       f'{verse_number_to}')
+        request_url = '{}/{}/{}/{}'.format(
+            self.base_url,
+            chapter_number,
+            verse_number_from,
+            verse_number_to)
         response = requests.get(request_url)
         response.raise_for_status
         tafseer_dict = response.json()
@@ -72,11 +77,10 @@ class QuranTafseer:
         return tafseer_dict
 
     def _get_verse_text(self, url: str) -> str:
-        """_get_verse_text Gets verse text.
+        """_get_verse_text Gets verse Quran text.
 
         :param url: URL to make a request to get the verse text
         :return: The verse text
-        :rtype: str
         """
 
         verse_text_url = urljoin(WEB_API_URL, url)
