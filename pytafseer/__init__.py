@@ -5,3 +5,5 @@
 __author__ = """Emad Mokhtar"""
 __email__ = 'emad.m.habib@gmail.com'
 __version__ = '0.1.0'
+
+from .tafseer_package import QuranTafseer

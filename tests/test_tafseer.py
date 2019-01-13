@@ -1,4 +1,4 @@
-from tafseer_package.tafseer_package import QuranTafseer
+from pytafseer import QuranTafseer
 import pytest
 
 
@@ -20,7 +20,7 @@ def test_get_tafseer_books_with_lang():
 @pytest.mark.vcr()
 def test_get_tafseer_text_one_verse():
     book = QuranTafseer(1)
-    tafseer_text = book.get_tafseer_text(1, 1)
+    tafseer_text = book.get_verse_tafseer(1, 1)
     assert list(tafseer_text.keys()).sort() == ['tafseer_id', 'tafseer_name',
                                                 'ayah_url', 'ayah_number',
                                                 'text'].sort()
@@ -29,7 +29,7 @@ def test_get_tafseer_text_one_verse():
 @pytest.mark.vcr()
 def test_get_tafseer_text_one_verse_with_its_text():
     book = QuranTafseer(1)
-    tafseer_text = book.get_tafseer_text(1, 1, with_verse_text=True)
+    tafseer_text = book.get_verse_tafseer(1, 1, with_verse_text=True)
     assert list(tafseer_text.keys()).sort() == ['tafseer_id', 'tafseer_name',
                                                 'ayah_url', 'ayah_number',
                                                 'text', 'verse_text'].sort()
@@ -38,14 +38,14 @@ def test_get_tafseer_text_one_verse_with_its_text():
 @pytest.mark.vcr()
 def test_get_tafseer_text_range_verse():
     book = QuranTafseer(1)
-    tafseer_text = book.get_tafseer_text_range(1, 1, 2)
+    tafseer_text = book.get_verses_tafseer(1, 1, 2)
     assert len(tafseer_text) == 2
 
 
 @pytest.mark.vcr()
 def test_get_tafseer_text_range_verse_with_text():
     book = QuranTafseer(1)
-    tafseer_text = book.get_tafseer_text_range(1, 1, 2, with_verse_text=True)
+    tafseer_text = book.get_verses_tafseer(1, 1, 2, with_verse_text=True)
     assert list(tafseer_text[0].keys()).sort() == ['tafseer_id', 'tafseer_name',
                                                    'ayah_url', 'ayah_number',
                                                    'text', 'verse_text'].sort()
