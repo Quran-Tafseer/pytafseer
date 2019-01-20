@@ -9,7 +9,7 @@ from .settings import WEB_API_URL
 
 __author__ = """Emad Mokhtar"""
 __email__ = 'emad.m.habib@gmail.com'
-__version__ = '0.1.0'
+__version__ = '0.1'
 
 
 class QuranTafseer:
