@@ -30,7 +30,10 @@ Python Package (wrapper) for Quran Tafseer RESt APIs
 Features
 --------
 
-* TODO
+* Get list of Quran Tafseer/translation.
+* Get list of Quran Tafseer/translation filtered by language.
+* Get one verse tafseer/translation in a chapter.
+* Get Multiple verses tafseer/translation in a chapter.
 
 Credits
 -------

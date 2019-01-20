@@ -12,14 +12,6 @@ pytafseer.settings module
     :undoc-members:
     :show-inheritance:
 
-pytafseer.tafseer\_package module
----------------------------------
-
-.. automodule:: pytafseer.pytafseer
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 
 Module contents
 ---------------

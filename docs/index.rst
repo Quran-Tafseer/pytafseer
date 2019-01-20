@@ -1,5 +1,5 @@
-Welcome to Tafseer Python Package's documentation!
-======================================
+Welcome to PyTafseer Python Package's documentation!
+====================================================
 
 .. toctree::
    :maxdepth: 2

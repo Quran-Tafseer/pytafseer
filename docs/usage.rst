@@ -2,14 +2,14 @@
 Usage
 =====
 
-To use Tafseer Python Package in a project::
+To use Quran Tafseer Python Package in a project ::
 
     import pytafseer
 
 List of Tafseer books
 ---------------------
 
-To get a list of Tafseer books avalaible at the REST APIs::
+To get a list of tafseer books available at the REST APIs ::
 
     from pytafseer import QuranTafseer
 
@@ -86,7 +86,7 @@ To get a list of Tafseer books avalaible at the REST APIs::
 List of Tafseer books for one language
 ---------------------------------------
 
-To get a list of Tafseer books for one lanuage avalaible at the REST APIs::
+To get a list of tafseer books for one language available at the REST APIs ::
 
     from pytafseer import QuranTafseer
 
@@ -109,25 +109,19 @@ One verse Tafseer text
 
 To get tafseer for one verse in a chapter.
 
-1. You should active one ofr tafseer books.
-2. Get the verse tafseer from the book.::
+1. You should active one of the tafseer books.
+2. Get the verse tafseer text from the book. ::
     
-    tafseer = QuranTafseer(book_id=1)  # activate tafseer book
+    tafseer = QuranTafseer(book_id=10)  # activate tafseer book
     verse_tafseer = tafseer.get_verse_tafseer(chapter_number=1,
                                              verse_number=1)
     print(verse_tafseer)
     >>>
     {'ayah_number': 1,
     'ayah_url': '/quran/1/1',
-    'tafseer_id': 1,
-    'tafseer_name': 'التفسير الميسر',
-    'text': 'سورة الفاتحة سميت هذه السورة بالفاتحة؛ لأنه يفتتح بها القرآن العظيم، '
-         'وتسمى المثاني؛ لأنها تقرأ في كل ركعة، ولها أسماء أخر. أبتدئ قراءة '
-         'القرآن باسم الله مستعينا به، (اللهِ) علم على الرب -تبارك وتعالى- '
-         'المعبود بحق دون سواه، وهو أخص أسماء الله تعالى، ولا يسمى به غيره '
-         'سبحانه. (الرَّحْمَنِ) ذي الرحمة العامة الذي وسعت رحمته جميع الخلق، '
-         '(الرَّحِيمِ) بالمؤمنين، وهما اسمان من أسمائه تعالى، يتضمنان إثبات '
-         'صفة الرحمة لله تعالى كما يليق بجلاله.'}
+    'tafseer_id': 10,
+    'tafseer_name': 'Yusuf Ali',
+    'text': 'In the name of Allah, Most Gracious, Most Merciful.'}
 
 
 Range of verses in a chapter Tafseer text
@@ -135,47 +129,37 @@ Range of verses in a chapter Tafseer text
 
 To get tafseer range of verses in a chapter.
 
-1. You should active one ofr tafseer books.
-2. Get multiple verses tafseer from the book.::
+1. You should active one of the tafseer books.
+2. Get multiple verses tafseer text from the book. ::
 
-    tafseer = QuranTafseer(book_id=1)  # activate tafseer book
+    tafseer = QuranTafseer(book_id=10)  # activate tafseer book
     verses_tafseer = tafseer.get_verses_tafseer(chapter_number=1,
                                                     verse_number_from=1,
                                                     verse_number_to=2)
     print(verses_tafseer)
     >>>
     [{'ayah_number': 1,
-      'ayah_url': '/quran/1/1',
-      'tafseer_id': 1,
-      'tafseer_name': 'التفسير الميسر',
-      'text': 'سورة الفاتحة سميت هذه السورة بالفاتحة؛ لأنه يفتتح بها القرآن '
-              'العظيم، وتسمى المثاني؛ لأنها تقرأ في كل ركعة، ولها أسماء أخر. أبتدئ '
-              'قراءة القرآن باسم الله مستعينا به، (اللهِ) علم على الرب -تبارك '
-              'وتعالى- المعبود بحق دون سواه، وهو أخص أسماء الله تعالى، ولا يسمى به '
-              'غيره سبحانه. (الرَّحْمَنِ) ذي الرحمة العامة الذي وسعت رحمته جميع '
-              'الخلق، (الرَّحِيمِ) بالمؤمنين، وهما اسمان من أسمائه تعالى، يتضمنان '
-              'إثبات صفة الرحمة لله تعالى كما يليق بجلاله.'},
-     {'ayah_number': 2,
-      'ayah_url': '/quran/1/2',
-      'tafseer_id': 1,
-      'tafseer_name': 'التفسير الميسر',
-      'text': '(الحَمْدُ للهِ رَبِّ العَالَمِينَ) الثناء على الله بصفاته التي '
-              'كلُّها أوصاف كمال، وبنعمه الظاهرة والباطنة، الدينية والدنيوية، وفي '
-              'ضمنه أَمْرٌ لعباده أن يحمدوه، فهو المستحق له وحده، وهو سبحانه '
-              'المنشئ للخلق، القائم بأمورهم، المربي لجميع خلقه بنعمه، ولأوليائه '
-              'بالإيمان والعمل الصالح.'}
-    ]
+    'ayah_url': '/quran/1/1',
+    'tafseer_id': 10,
+    'tafseer_name': 'Yusuf Ali',
+    'text': 'In the name of Allah, Most Gracious, Most Merciful.'},
+    {'ayah_number': 2,
+    'ayah_url': '/quran/1/2',
+    'tafseer_id': 10,
+    'tafseer_name': 'Yusuf Ali',
+    'text': 'Praise be to Allah, the Cherisher and Sustainer of the worlds;'}]
+
 
 
 Verse Tafseer text with its Quran text
 --------------------------------------
 
-Sometimes you want to get thte verse Quran text with tafseer text.
+Sometimes you want to get the verse Quran text with its tafseer text.
 
-1. You should active one ofr tafseer books.
-2. Get the verse tafseer from the book, but pass extra argument.::
+1. You should active one of the tafseer books.
+2. Get the verse tafseer from the book, but pass extra argument. ::
     
-    tafseer = QuranTafseer(book_id=1)  # activate tafseer book
+    tafseer = QuranTafseer(book_id=10)  # activate tafseer book
     verse_tafseer = tafseer.get_verse_tafseer(chapter_number=1,
                                               verse_number=1,
                                               with_verse_text=True)
@@ -183,24 +167,18 @@ Sometimes you want to get thte verse Quran text with tafseer text.
     >>>
     {'ayah_number': 1,
     'ayah_url': '/quran/1/1',
-    'tafseer_id': 1,
-    'tafseer_name': 'التفسير الميسر',
-    'text': 'سورة الفاتحة سميت هذه السورة بالفاتحة؛ لأنه يفتتح بها القرآن العظيم، '
-             'وتسمى المثاني؛ لأنها تقرأ في كل ركعة، ولها أسماء أخر. أبتدئ قراءة '
-             'القرآن باسم الله مستعينا به، (اللهِ) علم على الرب -تبارك وتعالى- '
-             'المعبود بحق دون سواه، وهو أخص أسماء الله تعالى، ولا يسمى به غيره '
-             'سبحانه. (الرَّحْمَنِ) ذي الرحمة العامة الذي وسعت رحمته جميع الخلق، '
-             '(الرَّحِيمِ) بالمؤمنين، وهما اسمان من أسمائه تعالى، يتضمنان إثبات '
-             'صفة الرحمة لله تعالى كما يليق بجلاله.',
+    'tafseer_id': 10,
+    'tafseer_name': 'Yusuf Ali',
+    'text': 'In the name of Allah, Most Gracious, Most Merciful.',
     'verse_text': 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ'}
 
 
 It's also working with getting the range.
 
-1. You should active one ofr tafseer books.
-2. Get multiple verses tafseer from the book.::
+1. You should active one of the tafseer books.
+2. Get multiple verses tafseer from the book. ::
 
-    tafseer = QuranTafseer(book_id=1)  # activate tafseer book
+    tafseer = QuranTafseer(book_id=10)  # activate tafseer book
     verses_tafseer = tafseer.get_verses_tafseer(chapter_number=1,
                                                 verse_number_from=1,
                                                 verse_number_to=2,

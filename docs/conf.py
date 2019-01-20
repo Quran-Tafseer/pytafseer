@@ -47,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Tafseer Python Package'
+project = u'Quran Tafseer Python Package'
 copyright = u"2019, Emad Mokhtar"
 author = u"Emad Mokhtar"
 
@@ -129,7 +129,7 @@ latex_elements = {
 # [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'pytafseer.tex',
-     u'Tafseer Python Package Documentation',
+     u'Quran Tafseer Python Package Documentation',
      u'Emad Mokhtar', 'manual'),
 ]
 
@@ -140,7 +140,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     (master_doc, 'pytafseer',
-     u'Tafseer Python Package Documentation',
+     u'Quran Tafseer Python Package Documentation',
      [author], 1)
 ]
 
@@ -152,7 +152,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'pytafseer',
-     u'Tafseer Python Package Documentation',
+     u'Quran Tafseer Python Package Documentation',
      author,
      'pytafseer',
      'One line description of project.',
