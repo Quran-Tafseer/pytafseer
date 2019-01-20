@@ -1,30 +1,32 @@
-======================
-Tafseer Python Package
-======================
+============================
+Quran Tafseer Python Package
+============================
 
 
 .. image:: https://img.shields.io/pypi/v/pytafseer.svg
         :target: https://pypi.python.org/pypi/pytafseer
 
-.. image:: https://img.shields.io/travis/emadmokhtar/pytafseer.svg
-        :target: https://travis-ci.org/emadmokhtar/pytafseer
+.. image:: https://img.shields.io/travis/Quran-Tafseer/pytafseer.svg
+        :target: https://travis-ci.org/Quran-Tafseer/pytafseer
 
-.. image:: https://readthedocs.org/projects/tafseer-package/badge/?version=latest
-        :target: https://tafseer-package.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/pytafseer/badge/?version=latest
+        :target: https://pytafseer.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
-.. image:: https://pyup.io/repos/github/emadmokhtar/pytafseer/shield.svg
-     :target: https://pyup.io/repos/github/emadmokhtar/pytafseer/
+.. image:: https://pyup.io/repos/github/Quran-Tafseer/pytafseer/shield.svg
+     :target: https://pyup.io/repos/github/Quran-Tafseer/pytafseer/
      :alt: Updates
 
+.. image:: https://pyup.io/repos/github/Quran-Tafseer/pytafseer/python-3-shield.svg
+     :target: https://pyup.io/repos/github/Quran-Tafseer/pytafseer/
+     :alt: Python 3
 
 
-Python Package (wrapper) for Quran Tafseer RESt APIs
+Python Package (wrapper) for `Quran Tafseer REST APIs <http://api.quran-tafseer.com/>`_
 
 
 * Free software: MIT license
-* Documentation: https://tafseer-package.readthedocs.io.
+* Documentation: https://pytafseer.readthedocs.io.
 
 
 Features
