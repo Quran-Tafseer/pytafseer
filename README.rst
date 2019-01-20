@@ -3,19 +3,19 @@ Tafseer Python Package
 ======================
 
 
-.. image:: https://img.shields.io/pypi/v/tafseer_package.svg
-        :target: https://pypi.python.org/pypi/tafseer_package
+.. image:: https://img.shields.io/pypi/v/pytafseer.svg
+        :target: https://pypi.python.org/pypi/pytafseer
 
-.. image:: https://img.shields.io/travis/emadmokhtar/tafseer_package.svg
-        :target: https://travis-ci.org/emadmokhtar/tafseer_package
+.. image:: https://img.shields.io/travis/emadmokhtar/pytafseer.svg
+        :target: https://travis-ci.org/emadmokhtar/pytafseer
 
 .. image:: https://readthedocs.org/projects/tafseer-package/badge/?version=latest
         :target: https://tafseer-package.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/emadmokhtar/tafseer_package/shield.svg
-     :target: https://pyup.io/repos/github/emadmokhtar/tafseer_package/
+.. image:: https://pyup.io/repos/github/emadmokhtar/pytafseer/shield.svg
+     :target: https://pyup.io/repos/github/emadmokhtar/pytafseer/
      :alt: Updates
 
 
@@ -30,7 +30,16 @@ Python Package (wrapper) for Quran Tafseer RESt APIs
 Features
 --------
 
-* TODO
+* Get list of Quran Tafseer/translation.
+* Get list of Quran Tafseer/translation filtered by language.
+* Get one verse tafseer/translation in a chapter.
+* Get Multiple verses tafseer/translation in a chapter.
+
+
+Settings (Environment Variable)
+-------------------------------
+
+* ``WEB_API_URL`` -> Quran Tafseer API URL, default http://api.quran-tafseer.com/
 
 Credits
 -------

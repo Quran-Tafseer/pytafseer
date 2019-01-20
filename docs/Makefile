@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = tafseer_package
+SPHINXPROJ    = pytafseer
 SOURCEDIR     = .
 BUILDDIR      = _build
 

@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=tafseer_package
+set SPHINXPROJ=pytafseer
 
 if "%1" == "" goto help
 
