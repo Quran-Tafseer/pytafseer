@@ -35,6 +35,12 @@ Features
 * Get one verse tafseer/translation in a chapter.
 * Get Multiple verses tafseer/translation in a chapter.
 
+
+Settings (Environment Variable)
+-------------------------------
+
+* ``WEB_API_URL`` -> Quran Tafseer API URL, default http://api.quran-tafseer.com/
+
 Credits
 -------
 
