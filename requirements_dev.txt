@@ -26,7 +26,7 @@ MarkupSafe==1.1.0
 mccabe==0.6.1
 more-itertools==5.0.0
 multidict==4.5.2
-packaging==18.0
+packaging==19.0
 pathtools==0.1.2
 pkginfo==1.4.2
 pluggy==0.8.0
