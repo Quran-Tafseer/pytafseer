@@ -29,7 +29,7 @@ multidict==4.7.5
 packaging==20.3
 pathtools==0.1.2
 pkginfo==1.5.0.1
-pluggy==0.9.0
+pluggy==0.13.1
 poyo==0.4.2
 py==1.8.0
 pycodestyle==2.5.0
