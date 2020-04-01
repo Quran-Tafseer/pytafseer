@@ -58,6 +58,6 @@ vcrpy==4.0.2
 virtualenv==20.0.15
 watchdog==0.10.2
 webencodings==0.5.1
-whichcraft==0.5.2
+whichcraft==0.6.1
 wrapt==1.11.1
 yarl>=1.2.0
