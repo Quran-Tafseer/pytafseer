@@ -31,7 +31,6 @@ class QuranTafseer:
         :return: list of dictionary with tafseer attributes ['id', 'name',
                  'language', 'author', 'book_name']
         """
-
         params = {}
         if language:
             params['lang'] = language
@@ -45,7 +44,18 @@ class QuranTafseer:
         self.base_url = '{}/tafseer/{}'.format(WEB_API_URL,
                                                book_id)
 
-    def get_verse_tafseer(self, chapter_number: int, verse_number: int,
+    @property
+    def book_details(self) -> dict:
+        """
+        Get the details of the tafseer book
+        """
+        book_details_response = requests.get(self.base_url)
+        book_details_response.raise_for_status()
+        return book_details_response.json()
+
+    def get_verse_tafseer(self,
+                          chapter_number: int,
+                          verse_number: int,
                           with_verse_text: bool = False) -> dict:
         """Gets the tafseer text for one verse
 

@@ -6,7 +6,8 @@ import pytest
 def test_get_tafseer_books():
     tafseer_list = QuranTafseer.get_tafseer_books()
     assert tafseer_list is not None
-    assert list(tafseer_list[0].keys()).sort() == ['id', 'name', 'language', 'author',
+    assert list(tafseer_list[0].keys()).sort() == ['id', 'name',
+                                                   'language', 'author',
                                                    'book_name'].sort()
 
 
@@ -49,3 +50,16 @@ def test_get_tafseer_text_range_verse_with_text():
     assert list(tafseer_text[0].keys()).sort() == ['tafseer_id', 'tafseer_name',
                                                    'ayah_url', 'ayah_number',
                                                    'text', 'verse_text'].sort()
+
+
+@pytest.mark.vcr()
+def test_get_tafseer_book_details():
+    tafseer_book = QuranTafseer(1)
+    tafseer_book_details = tafseer_book.book_details
+    assert tafseer_book_details == {
+        "id": 1,
+        "name": "التفسير الميسر",
+        "language": "ar",
+        "author": "نخبة من العلماء",
+        "book_name": "التفسير الميسر"
+    }
