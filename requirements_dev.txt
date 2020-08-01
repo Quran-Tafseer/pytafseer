@@ -55,7 +55,7 @@ tqdm==4.48.0
 twine==3.2.0
 urllib3==1.25.10
 vcrpy==4.1.0
-virtualenv==20.0.15
+virtualenv==20.0.29
 watchdog==0.10.2
 webencodings==0.5.1
 whichcraft==0.6.1
