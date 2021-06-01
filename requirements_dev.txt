@@ -37,7 +37,7 @@ pyflakes==2.3.1
 Pygments==2.9.0
 pyparsing==2.4.7
 pytest==6.2.4
-pytest-runner==5.2
+pytest-runner==5.3.1
 pytest-vcr==1.0.2
 python-dateutil==2.8.1
 pyyaml>=4.2b1
