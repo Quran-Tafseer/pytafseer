@@ -18,7 +18,7 @@ docutils==0.18.1
 filelock==3.4.0
 flake8==4.0.1
 future==0.18.2
-idna==2.9
+idna==3.3
 imagesize==1.2.0
 Jinja2==2.11.1
 jinja2-time==0.2.0
