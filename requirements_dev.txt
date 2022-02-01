@@ -53,7 +53,7 @@ toml==0.10.2
 tox==3.24.5
 tqdm==4.62.3
 twine==3.7.1
-urllib3==1.25.8
+urllib3==1.26.8
 vcrpy==4.0.2
 virtualenv==20.0.15
 watchdog==0.10.2
