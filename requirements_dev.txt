@@ -9,7 +9,7 @@ Babel==2.9.1
 binaryornot==0.4.4
 bleach==4.1.0
 bumpversion==0.6.0
-certifi==2019.11.28
+certifi==2021.10.8
 chardet==3.0.4
 Click==7.1.1
 cookiecutter==1.7.0
