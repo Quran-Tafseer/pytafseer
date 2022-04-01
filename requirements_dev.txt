@@ -36,7 +36,7 @@ pycodestyle==2.8.0
 pyflakes==2.4.0
 Pygments==2.11.2
 pyparsing==3.0.7
-pytest==5.4.1
+pytest==7.1.1
 pytest-runner==5.2
 pytest-vcr==1.0.2
 python-dateutil==2.8.1
