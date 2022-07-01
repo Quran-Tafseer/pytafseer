@@ -24,7 +24,7 @@ Jinja2==3.1.2
 jinja2-time==0.2.0
 MarkupSafe==2.1.1
 mccabe==0.7.0
-more-itertools==8.2.0
+more-itertools==8.13.0
 multidict==4.7.5
 packaging==20.3
 pathtools==0.1.2
