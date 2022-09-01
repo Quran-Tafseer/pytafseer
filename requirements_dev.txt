@@ -16,7 +16,7 @@ cookiecutter==2.1.1
 coverage==6.4.4
 docutils==0.19
 filelock==3.8.0
-flake8==3.7.9
+flake8==5.0.4
 future==0.18.2
 idna==2.9
 imagesize==1.2.0
