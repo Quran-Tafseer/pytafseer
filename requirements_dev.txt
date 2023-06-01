@@ -34,7 +34,7 @@ poyo==0.5.0
 py==1.11.0
 pycodestyle==2.10.0
 pyflakes==3.0.1
-Pygments==2.13.0
+Pygments==2.15.1
 pyparsing==3.0.9
 pytest==7.2.0
 pytest-runner==6.0.0
