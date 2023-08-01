@@ -13,7 +13,7 @@ certifi==2023.7.22
 chardet==5.1.0
 Click==8.1.6
 cookiecutter==2.2.3
-coverage==6.5.0
+coverage==7.2.7
 docutils==0.19
 filelock==3.8.0
 flake8==6.0.0
