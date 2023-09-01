@@ -50,7 +50,7 @@ snowballstemmer==2.2.0
 Sphinx==7.2.5
 sphinxcontrib-websupport==1.2.6
 toml==0.10.2
-tox==3.27.1
+tox==4.11.0
 tqdm==4.64.1
 twine==4.0.2
 urllib3==1.26.13
