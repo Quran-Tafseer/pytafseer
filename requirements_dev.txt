@@ -15,7 +15,7 @@ Click==8.1.7
 cookiecutter==2.3.0
 coverage==7.3.0
 docutils==0.20.1
-filelock==3.8.0
+filelock==3.12.3
 flake8==6.0.0
 future==0.18.2
 idna==3.4
