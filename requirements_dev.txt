@@ -4,7 +4,7 @@ argh==0.28.1
 arrow==1.2.3
 atomicwrites==1.4.1
 attrs==23.1.0
-autopep8==2.0.0
+autopep8==2.0.4
 Babel==2.11.0
 binaryornot==0.4.4
 bleach==5.0.1
