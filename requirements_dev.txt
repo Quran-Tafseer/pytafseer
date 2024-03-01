@@ -51,7 +51,7 @@ Sphinx==7.2.6
 sphinxcontrib-websupport==1.2.7
 toml==0.10.2
 tox==4.13.0
-tqdm==4.64.1
+tqdm==4.66.2
 twine==4.0.2
 urllib3==1.26.13
 vcrpy==4.2.1
